@@ -1,4 +1,5 @@
 import 'package:efe1/commons/bloc_provider.dart';
+import 'package:efe1/commons/functions.dart';
 import 'package:efe1/driver_standings/driver_standing_item.dart';
 import 'package:efe1/driver_standings/driver_standings_bloc.dart';
 import 'package:flutter/cupertino.dart';
@@ -48,6 +49,4 @@ class DriverStandings extends StatelessWidget {
       },
     );
   }
-
-  T? cast<T>(x) => x is T ? x : null;
 }
