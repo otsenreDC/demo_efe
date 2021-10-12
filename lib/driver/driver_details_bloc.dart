@@ -13,7 +13,9 @@ class DriverDetailsBloc implements Bloc {
   Stream<Driver> get stream => _controller.stream;
 
   void loadDriver(String driverId) {
-
+    _client.fetchDriver(driverId).then(
+          (driver) => _controller.sink.add(driver),
+        );
   }
 
   @override

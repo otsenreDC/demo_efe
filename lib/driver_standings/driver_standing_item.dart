@@ -20,7 +20,7 @@ class DriverStandingItem extends StatelessWidget {
           onTap: () {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context) => DriverDetails(_driverStanding.name),
+                builder: (context) => DriverDetails(_driverStanding.driverId),
               ),
             );
           },
