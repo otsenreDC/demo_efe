@@ -1,3 +1,4 @@
+import 'package:efe1/driver/driver_details_screen.dart';
 import 'package:efe1/driver_standings/driver_standing.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,13 @@ class DriverStandingItem extends StatelessWidget {
           title: Text("${_driverStanding.position} - ${_driverStanding.name}"),
           subtitle: Text(_driverStanding.constructor),
           trailing: const Icon(Icons.chevron_right),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => DriverDetails(_driverStanding.name),
+              ),
+            );
+          },
         ),
       ),
     );

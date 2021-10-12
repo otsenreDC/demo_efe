@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'driver_standing.dart';
 
 class DriverStandings extends StatelessWidget {
-  DriverStandings({Key? key}) : super(key: key);
+  const DriverStandings({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class DriverStandings extends StatelessWidget {
       stream: bloc.stream,
       builder: (context, snapshot) {
         final data = cast<List<DriverStanding>>(snapshot.data);
-        print(data);
+
         if (data == null) {
           return const Center(
             child: Text("Cargando"),
