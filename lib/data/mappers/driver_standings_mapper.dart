@@ -16,7 +16,7 @@ class DriverStandingMapper {
     return DriverStanding(
         driverId: driver["driverId"],
         position: map["position"],
-        name: driver["givenName"],
+        name: "${driver["familyName"]}, ${driver["givenName"]}",
         constructor: constructor["name"]);
   }
 }

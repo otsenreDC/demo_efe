@@ -1,5 +1,6 @@
 import 'package:efe1/driver_standings/driver_standing.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class DriverStandingItem extends StatelessWidget {
   final DriverStanding _driverStanding;
@@ -8,8 +9,15 @@ class DriverStandingItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(_driverStanding.name),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Card(
+        child: ListTile(
+          title: Text("${_driverStanding.position} - ${_driverStanding.name}"),
+          subtitle: Text(_driverStanding.constructor),
+          trailing: const Icon(Icons.chevron_right),
+        ),
+      ),
     );
   }
 }
