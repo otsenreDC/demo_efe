@@ -1,8 +1,17 @@
 class DriverStanding {
   String driverId = "";
-  int position = 0;
+  String position = "";
   String name = "";
   String constructor = "";
 
-  DriverStanding(this.driverId, this.position, this.name, this.constructor);
+  DriverStanding(
+      {required this.driverId,
+      required this.position,
+      required this.name,
+      required this.constructor});
+
+  @override
+  String toString() {
+    return "$driverId, $position, $name, $constructor";
+  }
 }
