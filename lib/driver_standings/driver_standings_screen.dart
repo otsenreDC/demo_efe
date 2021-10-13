@@ -2,6 +2,7 @@ import 'package:efe1/commons/bloc_provider.dart';
 import 'package:efe1/commons/functions.dart';
 import 'package:efe1/driver_standings/driver_standing_item.dart';
 import 'package:efe1/driver_standings/driver_standings_bloc.dart';
+import 'package:efe1/widgets/loading.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -32,9 +33,7 @@ class DriverStandings extends StatelessWidget {
         final data = cast<List<DriverStanding>>(snapshot.data);
 
         if (data == null) {
-          return const Center(
-            child: Text("Cargando"),
-          );
+          return LoadingWidget();
         }
 
         if (data.isEmpty) {

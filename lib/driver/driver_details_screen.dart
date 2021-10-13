@@ -1,6 +1,7 @@
 import 'package:efe1/commons/bloc_provider.dart';
 import 'package:efe1/commons/functions.dart';
 import 'package:efe1/driver/driver_details_bloc.dart';
+import 'package:efe1/widgets/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -31,9 +32,7 @@ class DriverDetails extends StatelessWidget {
         final data = cast<Driver>(snapshot.data);
 
         if (data == null) {
-          return const Center(
-            child: Text("Cargando"),
-          );
+          return LoadingWidget();
         }
 
         return Scaffold(
