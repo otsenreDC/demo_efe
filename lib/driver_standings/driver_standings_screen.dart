@@ -17,6 +17,9 @@ class DriverStandings extends StatelessWidget {
     return BlocProvider<DriverStandingsBloc>(
       bloc: bloc,
       child: Scaffold(
+        appBar: AppBar(
+          title: const Text("Driver Standings"),
+        ),
         body: _streamBuilder(bloc),
       ),
     );

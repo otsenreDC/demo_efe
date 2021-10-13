@@ -37,6 +37,9 @@ class DriverDetails extends StatelessWidget {
         }
 
         return Scaffold(
+          appBar: AppBar(
+            title: const Text("Driver"),
+          ),
           body: SafeArea(
             child: Card(
               margin: const EdgeInsets.all(16.0),
