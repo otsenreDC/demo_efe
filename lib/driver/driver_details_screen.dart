@@ -37,8 +37,52 @@ class DriverDetails extends StatelessWidget {
         }
 
         return Scaffold(
-          body: Center(
-            child: Text(data.name),
+          body: SafeArea(
+            child: Card(
+              margin: const EdgeInsets.all(16.0),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      data.name,
+                      style: const TextStyle(
+                          fontSize: 22, fontWeight: FontWeight.bold),
+                    ),
+                    const Spacer(
+                      flex: 1,
+                    ),
+                    Center(
+                      child: Text(
+                        data.number,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 50,
+                        ),
+                      ),
+                    ),
+                    const Spacer(
+                      flex: 1,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text(
+                          data.dateOfBirth,
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        Container(
+                          width: 20,
+                        ),
+                        Text(data.nationality),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
         );
       },
